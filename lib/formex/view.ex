@@ -1,7 +1,5 @@
 defmodule Formex.View do
-  import Phoenix.HTML
-import Phoenix.HTML.Form
-use PhoenixHTMLHelpers
+  use Phoenix.HTML
   alias Formex.Form
   alias Formex.Field
   alias Formex.FormCollection

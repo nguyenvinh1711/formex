@@ -3,9 +3,7 @@ defmodule Formex.TestErrorHelpers do
   Conveniences for translating and building error messages.
   """
 
-  # import Phoenix.HTML
-import Phoenix.HTML.Form
-use PhoenixHTMLHelpers
+  # use Phoenix.HTML
 
   @doc """
   Translates an error message using gettext.

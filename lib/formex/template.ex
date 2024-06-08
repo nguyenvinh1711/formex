@@ -62,9 +62,7 @@ defmodule Formex.Template do
   @doc false
   def main do
     quote do
-      import Phoenix.HTML
-import Phoenix.HTML.Form
-use PhoenixHTMLHelpers
+      use Phoenix.HTML
       alias Formex.Form
       alias Formex.Field
       alias Formex.Button
@@ -76,9 +74,7 @@ use PhoenixHTMLHelpers
   @doc false
   def helper do
     quote do
-      import Phoenix.HTML
-import Phoenix.HTML.Form
-use PhoenixHTMLHelpers
+      use Phoenix.HTML
       alias Formex.Form
       alias Formex.Field
       alias Formex.Button
