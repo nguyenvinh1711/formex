@@ -62,7 +62,9 @@ defmodule Formex.Template do
   @doc false
   def main do
     quote do
-      use Phoenix.HTML
+      import Phoenix.HTML
+      import Phoenix.HTML.Form
+      use PhoenixHTMLHelpers
       alias Formex.Form
       alias Formex.Field
       alias Formex.Button
@@ -74,7 +76,9 @@ defmodule Formex.Template do
   @doc false
   def helper do
     quote do
-      use Phoenix.HTML
+      import Phoenix.HTML
+      import Phoenix.HTML.Form
+      use PhoenixHTMLHelpers
       alias Formex.Form
       alias Formex.Field
       alias Formex.Button
@@ -108,7 +112,7 @@ defmodule Formex.Template do
   #
 
   @doc """
-  Runs function from [`Phoenix.HTML.Form`](https://hexdocs.pm/phoenix_html/Phoenix.HTML.Form.html)
+  Runs function from [`Phoenix.HTML.Form`](https://hexdocs.pm/phoenix_html/PhoenixHTMLHelpers.Form.html)
   defined in a `Field.type` or `Button.type`
   """
   @spec render_phoenix_input(item :: any, args :: Keyword.t()) :: any
@@ -139,7 +143,7 @@ defmodule Formex.Template do
   """
   def format_error(error) do
     error
-    |> Phoenix.HTML.Format.text_to_html()
+    |> PhoenixHTMLHelpers.Format.text_to_html()
   end
 
   @doc """

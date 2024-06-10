@@ -32,7 +32,7 @@ defmodule Formex.Type do
   ```
 
   The `:text_input` and so on are function names from
-  [`Phoenix.HTML.Form`](https://hexdocs.pm/phoenix_html/Phoenix.HTML.Form.html)
+  [`Phoenix.HTML.Form`](https://hexdocs.pm/phoenix_html/PhoenixHTMLHelpers.Form.html)
 
   ## Nested forms
 

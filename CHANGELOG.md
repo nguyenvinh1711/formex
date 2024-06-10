@@ -109,7 +109,7 @@ See CHANGELOG.md for migration instructions
   Run `npm install formex` to update JS library.
 
 ## v0.4.7 (2017-04-12)
-* Fixed "`Phoenix.HTML.Form.Formex.CustomField.SelectAssoc/3` is undefined" errors
+* Fixed "`PhoenixHTMLHelpers.Form.Formex.CustomField.SelectAssoc/3` is undefined" errors
 * Added `opts` argument in `Formex.Builder/4`
 
 ## v0.4.6 (2017-04-10)

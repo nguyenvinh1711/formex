@@ -100,7 +100,7 @@ Please note that `required` option is used only to generate an asterisk.
 Any validation must be done via `validation` option.
 
 The `:text_input` and so on are function names from
-[`Phoenix.HTML.Form`](https://hexdocs.pm/phoenix_html/Phoenix.HTML.Form.html)
+[`Phoenix.HTML.Form`](https://hexdocs.pm/phoenix_html/PhoenixHTMLHelpers.Form.html)
 
 ### Controller
 

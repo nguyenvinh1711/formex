@@ -1,5 +1,5 @@
 defmodule Formex.View do
-  use Phoenix.HTML
+  use PhoenixHTMLHelpers
   alias Formex.Form
   alias Formex.Field
   alias Formex.FormCollection
@@ -70,11 +70,11 @@ defmodule Formex.View do
 
   @doc """
   Works similar to a
-  [Phoenix.HTML.Form](https://hexdocs.pm/phoenix_html/Phoenix.HTML.Form.html#form_for/4)
+  [Phoenix.HTML.Form](https://hexdocs.pm/phoenix_html/PhoenixHTMLHelpers.Form.html#form_for/4)
 
   In the callback function the first argument is `t:Formex.Form.t/0` instead of a
-  `t:Phoenix.HTML.Form.t/0`.
-  This argument contains the `t:Phoenix.HTML.Form.t/0` under a `:phoenix_form` key
+  `t:PhoenixHTMLHelpers.Form.t/0`.
+  This argument contains the `t:PhoenixHTMLHelpers.Form.t/0` under a `:phoenix_form` key
 
   ## Options
     In `options` argument you are passing together options for `Formex.View` and for `Phoenix.HTML`.
@@ -88,14 +88,14 @@ defmodule Formex.View do
   ### Phoenix options
 
     Options not mentioned before will be passed to a
-    [Phoenix.HTML.Form](https://hexdocs.pm/phoenix_html/Phoenix.HTML.Form.html#form_for/4)
+    [Phoenix.HTML.Form](https://hexdocs.pm/phoenix_html/PhoenixHTMLHelpers.Form.html#form_for/4)
     function. Options below are already set by Formex and can be overriden.
 
     * `as` - form name, defaults to struct name
     * `method` - method, defaults to `:post`
 
   For rest of options, see
-  [Phoenix.HTML.Form](https://hexdocs.pm/phoenix_html/Phoenix.HTML.Form.html#form_for/4) docs.
+  [Phoenix.HTML.Form](https://hexdocs.pm/phoenix_html/PhoenixHTMLHelpers.Form.html#form_for/4) docs.
 
   """
   @spec formex_form_for(
@@ -118,7 +118,7 @@ defmodule Formex.View do
 
     fake_conn = %Plug.Conn{params: fake_params, method: "POST"}
 
-    Phoenix.HTML.Form.form_for(fake_conn, action, phoenix_options, fn phx_form ->
+    PhoenixHTMLHelpers.Form.form_for(fake_conn, action, phoenix_options, fn phx_form ->
       form
       |> Map.put(:phoenix_form, phx_form)
       |> Map.put(:template, options[:template])

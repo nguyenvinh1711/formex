@@ -8,7 +8,7 @@ defmodule Formex.Field do
     * `:struct_name` - a name of a key in your struct. By default the same as `:name`
     * `:custom_value` - custom function that extracts a value that will be used in view
     * `:type` - a type of a field that in most cases will be the name of a function from
-      [`Phoenix.HTML.Form`](https://hexdocs.pm/phoenix_html/Phoenix.HTML.Form.html)
+      [`Phoenix.HTML.Form`](https://hexdocs.pm/phoenix_html/PhoenixHTMLHelpers.Form.html)
     * `:value` - the value from struct/params
     * `:required` - is field required? Used only in template, not validated
     * `:validation` - validation rules to be passed to a validator
@@ -17,7 +17,7 @@ defmodule Formex.Field do
       for `<option>`'s)
     * `:opts` - options
     * `:phoenix_opts` - options that will be passed to
-      [`Phoenix.HTML.Form`](https://hexdocs.pm/phoenix_html/Phoenix.HTML.Form.html)
+      [`Phoenix.HTML.Form`](https://hexdocs.pm/phoenix_html/PhoenixHTMLHelpers.Form.html)
   """
   defstruct name: nil,
             struct_name: nil,
@@ -36,9 +36,9 @@ defmodule Formex.Field do
   Creates a new field.
 
   `type` is the name of function from
-  [`Phoenix.HTML.Form`](https://hexdocs.pm/phoenix_html/Phoenix.HTML.Form.html). For example,
+  [`Phoenix.HTML.Form`](https://hexdocs.pm/phoenix_html/PhoenixHTMLHelpers.Form.html). For example,
   if you need to render a password field, then use
-  [`Phoenix.HTML.Form.password_input/3`](https://hexdocs.pm/phoenix_html/Phoenix.HTML.Form.html#password_input/3)
+  [`PhoenixHTMLHelpers.Form.password_input/3`](https://hexdocs.pm/phoenix_html/PhoenixHTMLHelpers.Form.html#password_input/3)
   in that way:
 
   ```
@@ -64,7 +64,7 @@ defmodule Formex.Field do
       end)
       ```
     * `:phoenix_opts` - options that will be passed to
-      [`Phoenix.HTML.Form`](https://hexdocs.pm/phoenix_html/Phoenix.HTML.Form.html), for example:
+      [`Phoenix.HTML.Form`](https://hexdocs.pm/phoenix_html/PhoenixHTMLHelpers.Form.html), for example:
       ```
       form
       |> add(:content, :textarea, phoenix_opts: [
